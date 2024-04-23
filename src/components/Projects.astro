@@ -1,0 +1,93 @@
+---
+import GitHub from "../icons/GitHub.astro";
+import NextIcon from "../icons/NextJS.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import ExternalLinkIcon from "../icons/ExternalLink.astro";
+import LinkButton from "./LinkButton.astro";
+import AlgoliaIcon from "../icons/Algolia.astro";
+import TypeScriptIcon from "../icons/Typescript.astro";
+import FirebaseIcon from "../icons/Firebase.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextIcon,
+    size: "size-4",
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+    size: "size-4",
+  },
+  ALGOLIA: {
+    name: "",
+    class: "bg-white text-[#5468FF]",
+    icon: AlgoliaIcon,
+    size: "w-14 h-4 px-2",
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178C6] text-white",
+    icon: TypeScriptIcon,
+    size: "size-3",
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#FFCA28] text-black",
+    icon: FirebaseIcon,
+    size: "size-4 bg-black rounded-full",
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Reni e-commerce",
+    description: `Este proyecto lo realicé durante el módulo 10 de la carrera de Desarrollo Web Fullstack de APX. Tanto el Frontend como el Backend de este e-commerce fueron desarrollados utilizando Next.js 12 y TypeScript. Incluye integración con Mercado Pago y la utilización de styled-components, SWR y SendGrid.
+    Para las bases de datos, utilicé Firebase, Algolia y Airtable, y el sistema de inicio de sesión se implementó con autenticación sin contraseña (passwordless).`,
+    image: "../../public/reni.webp",
+    link: "https://e-commerce-front-six.vercel.app/",
+    github: "https://github.com/Francisco-B07/e-commerce-front",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.ALGOLIA, TAGS.FIREBASE],
+  },
+];
+---
+
+<section class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, image, link, github, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`${tag.class} flex gap-x-2 rounded-full text-xs py-1 px-2`}
+              >
+                <tag.icon class={`${tag.size}`} />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${title}`}
+        />
+        <footer class="flex items-center gap-x-4 mt-4 ">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-4 md:size-6" /> Ver código fuente
+            </LinkButton>
+          )}
+          <LinkButton href={link}>
+            Ir al sitio web <ExternalLinkIcon class="size-4 md:size-6" />
+          </LinkButton>
+        </footer>
+      </article>
+    ))
+  }
+</section>
