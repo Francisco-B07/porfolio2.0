@@ -7,6 +7,7 @@ import LinkButton from "./LinkButton.astro";
 import AlgoliaIcon from "../icons/Algolia.astro";
 import TypeScriptIcon from "../icons/Typescript.astro";
 import FirebaseIcon from "../icons/Firebase.astro";
+import VercelIcon from "../icons/Vercel.astro";
 
 const TAGS = {
   NEXT: {
@@ -39,6 +40,12 @@ const TAGS = {
     icon: FirebaseIcon,
     size: "size-4 bg-black rounded-full",
   },
+  VERCEL: {
+    name: "AI SDK Vercel",
+    class: "bg-[#FFF] text-black",
+    icon: VercelIcon,
+    size: "size-4",
+  },
 };
 
 const PROJECTS = [
@@ -48,7 +55,8 @@ const PROJECTS = [
     `,
     image: "/destinopolis.webp",
     link: "https://destinopolis.vercel.app/",
-    tags: [TAGS.NEXT, TAGS.TYPESCRIPT],
+    github: "https://github.com/Francisco-B07/destinopolis",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.VERCEL],
   },
   {
     title: "Reni e-commerce",
