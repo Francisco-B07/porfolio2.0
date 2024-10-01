@@ -51,10 +51,10 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Destinopolis",
-    description: `Esta aplicación web permite generar cronogramas de viajes utilizando inteligencia artificial. Desarrollada con Next.js 14 y el SDK AI de Vercel, la aplicación ofrece una experiencia fluida y precisa. El cronograma incluye recomendaciones de lugares obtenidas a través de la API de OpenAI, complementadas con información detallada sobre el clima, transporte, fotos y más, gracias a la integración con las APIs de OpenWeatherMap, Here Maps, Google Maps, Unsplash y Amadeus.
+    description: `Esta aplicación web fue desarrollada para el hackathon organizado por Midudev y Vercel. Permite generar cronogramas de viajes utilizando inteligencia artificial y ofrece una experiencia fluida y precisa. Fue desarrollada con Next.js 14 y el SDK AI de Vercel, la aplicación genera cronogramas que incluyen recomendaciones de lugares obtenidas a través de la API de OpenAI, complementadas con información detallada sobre el clima, transporte, fotografías y más, gracias a la integración con las APIs de OpenWeatherMap, Here Maps, Google Maps, y Amadeus.
     `,
     image: "/destinopolis.webp",
-    link: "https://destinopolis.vercel.app/",
+    link: "https://www.youtube.com/watch?v=Qf7ACWhiH9s",
     github: "https://github.com/Francisco-B07/destinopolis",
     tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.VERCEL],
   },
@@ -74,9 +74,13 @@ const PROJECTS = [
   {
     PROJECTS.map(({ title, description, image, link, github, tags }) => (
       <article>
-        <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-x-2 flex-row mb-2">
+        <h3 class="text-2xl font-semibold text-yellow-200/90 mb-2 md:px-0 px-4">
+          {title}
+        </h3>
+        <p class="text-base md:text-lg mb-4 text-pretty md:px-0 px-4">
+          {description}
+        </p>
+        <ul class="flex gap-x-2 flex-row mb-2 md:ml-0 ml-4">
           {tags.map((tag) => (
             <li>
               <span
@@ -89,18 +93,18 @@ const PROJECTS = [
           ))}
         </ul>
         <img
-          class="rounded shadow-2xl shadow-white/10"
+          class="rounded shadow-2xl shadow-white/10 md:px-0 px-4"
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
         />
-        <footer class="flex items-center gap-x-4 mt-4 ">
+        <footer class="flex items-center gap-x-4 mt-4 md:px-0 px-4">
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-4 md:size-6" /> Ver código fuente
             </LinkButton>
           )}
           <LinkButton href={link}>
-            Ir al sitio web <ExternalLinkIcon class="size-4 md:size-6" />
+            Ver proyecto <ExternalLinkIcon class="size-4 md:size-6" />
           </LinkButton>
         </footer>
       </article>

@@ -18,18 +18,20 @@ import ProfileCheck from "../icons/ProfileCheck.astro";
 ---
 
 <Layout
-  title="Portfolio de Francisco Burgoa - Desarrollador y Programador Web"
+  title="Francisco Burgoa - Desarrollador y Programador Web"
   description="Contratame para tu próximo proyecto. Soy un desarrollador web full stack con más de 2 años de experiencia. Trabajo con tecnologías como JavaScript, React, Node.js, Express, PostgreSQL, entre otras. También tengo experiencia en diseño web y SEO. Me encanta aprender y siempre estoy buscando nuevos desafíos. Si estás interesado en trabajar conmigo, no dudes en contactarme."
 >
-  <main class="px-4">
-    <SectionContainer class="py-44">
-      <img
-        class="rounded-full w-16 h-16 mb-4"
-        src="foto-perfil.jpeg"
-        alt="foto de perfil"
-      />
+  <main class="">
+    <SectionContainer class="pt-28 pb-10 md:py-44 md:px-0 px-4">
+      <div class="flex w--full justify-center md:justify-start">
+        <img
+          class="rounded-full w-40 h-40 md:w-20 md:h-20 md:mb-4 mb-8"
+          src="foto-perfil.jpeg"
+          alt="foto de perfil"
+        />
+      </div>
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5 lg:pb-8"
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-5 lg:pb-8 md:justify-start justify-center"
       >
         Hola, soy Francisco
         <a
@@ -47,44 +49,48 @@ import ProfileCheck from "../icons/ProfileCheck.astro";
         <span class="opacity-85"> +1 años de experiencia.</span>
       </h2>
 
-      <nav class="flex gap-2 mt-8 flex-wrap">
+      <nav
+        class="flex justify-center md:justify-start gap-6 md:gap-3 mt-8 flex-wrap"
+      >
         <SocialPill href="https://www.linkedin.com/in/franciscoburgoa/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
+          <LinkedInIcon class="size-6 md:size-6" />
+          <span class="hidden md:flex">LinkedIn</span>
         </SocialPill>
         <SocialPill href="https://github.com/Francisco-B07">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
+          <GitHubIcon class="size-8 md:size-6" />
+          <span class="hidden md:flex"> GitHub </span>
         </SocialPill>
         <SocialPill href="mailto:franciscojburgoa@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          Email
+          <MailIcon class="size-8 md:size-6" />
+          <span class="hidden md:flex"> Email </span>
         </SocialPill>
         <SocialPill
           download="CV Burgoa Francisco"
           href="/CV Burgoa Francisco.pdf"
         >
-          <CvIcon class="size-4 md:size-6" />
-          CV
+          <CvIcon class="size-8 md:size-6" />
+          <span class="hidden md:flex"> CV </span>
         </SocialPill>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
+    <SectionContainer id="experiencia" class="md:px-0 px-4">
       <h2 class="text-3xl font-semibold flex gap-x-3 items-center pt-20 mb-7">
         <Briefcase class="size-7" /> Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2 class="text-3xl font-semibold flex gap-x-3 items-center pt-20 mb-7">
+    <SectionContainer id="proyectos" class="">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center pt-20 mb-7 md:px-0 px-4"
+      >
         <Code class="size-7" /> Proyectos
       </h2>
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
+    <SectionContainer id="sobre-mi" class="md:px-0 px-4">
       <h2 class="text-3xl font-semibold flex gap-x-3 items-center pt-20">
         <ProfileCheck class="size-7" /> Sobre mi
       </h2>
