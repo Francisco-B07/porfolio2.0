@@ -15,6 +15,7 @@ import CvIcon from "../icons/Cv.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Code from "../icons/Code.astro";
 import ProfileCheck from "../icons/ProfileCheck.astro";
+import TitleSection from "@/components/TitleSection.astro";
 ---
 
 <Layout
@@ -75,25 +76,23 @@ import ProfileCheck from "../icons/ProfileCheck.astro";
     </SectionContainer>
 
     <SectionContainer id="experiencia" class="md:px-0 px-4">
-      <h2 class="text-3xl font-semibold flex gap-x-3 items-center pt-20 mb-7">
+      <TitleSection>
         <Briefcase class="size-7" /> Experiencia laboral
-      </h2>
+      </TitleSection>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos" class="">
-      <h2
-        class="text-3xl font-semibold flex gap-x-3 items-center pt-20 mb-7 md:px-0 px-4"
-      >
+    <SectionContainer id="proyectos">
+      <TitleSection>
         <Code class="size-7" /> Proyectos
-      </h2>
+      </TitleSection>
       <Projects />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi" class="md:px-0 px-4">
-      <h2 class="text-3xl font-semibold flex gap-x-3 items-center pt-20">
+      <TitleSection>
         <ProfileCheck class="size-7" /> Sobre mi
-      </h2>
+      </TitleSection>
       <AboutMe />
     </SectionContainer>
   </main>
