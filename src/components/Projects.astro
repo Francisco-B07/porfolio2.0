@@ -50,6 +50,13 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "E-commerce Manso editorial",
+    description: `Desarrollé un e-commerce completo para Manso Editorial, un emprendimiento local enfocado en la venta de libros, con el objetivo de digitalizar su negocio y optimizar la experiencia de compra en línea.`,
+    image: "/manso_editorial.webp",
+    link: "https://www.mansoeditorial.com/",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+  },
+  {
     title: "Destinopolis",
     description: `Esta aplicación web fue desarrollada para el hackathon organizado por Midudev y Vercel. Permite generar cronogramas de viajes utilizando inteligencia artificial y ofrece una experiencia fluida y precisa. Fue desarrollada con Next.js 14 y el SDK AI de Vercel, la aplicación genera cronogramas que incluyen recomendaciones de lugares obtenidas a través de la API de OpenAI, complementadas con información detallada sobre el clima, transporte, fotografías y más, gracias a la integración con las APIs de OpenWeatherMap, Here Maps, Google Maps, y Amadeus.
     `,
@@ -57,15 +64,6 @@ const PROJECTS = [
     link: "https://www.youtube.com/watch?v=Qf7ACWhiH9s",
     github: "https://github.com/Francisco-B07/destinopolis",
     tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.VERCEL],
-  },
-  {
-    title: "Reni e-commerce",
-    description: `Este proyecto lo realicé durante el módulo 10 de la carrera de Desarrollo Web Fullstack de APX. Tanto el Frontend como el Backend de este e-commerce fueron desarrollados utilizando Next.js 12 y TypeScript. Incluye integración con Mercado Pago y la utilización de styled-components, SWR y SendGrid.
-    Para las bases de datos, utilicé Firebase, Algolia y Airtable, y el sistema de inicio de sesión se implementó con autenticación sin contraseña (passwordless).`,
-    image: "/reni.webp",
-    link: "https://e-commerce-front-six.vercel.app/",
-    github: "https://github.com/Francisco-B07/e-commerce-front",
-    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.ALGOLIA, TAGS.FIREBASE],
   },
 ];
 ---
@@ -93,7 +91,7 @@ const PROJECTS = [
           ))}
         </ul>
         <img
-          class="rounded shadow-2xl shadow-white/10 md:px-0 px-4"
+          class="rounded shadow-2xl shadow-white/10 md:px-0 px-4 mt-4"
           src={image}
           alt={`Captura de pantalla del proyecto ${title}`}
         />
