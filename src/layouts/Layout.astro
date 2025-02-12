@@ -20,8 +20,15 @@ const { description, title } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/pancho/image/upload/v1739387873/Reni/1674590430036_o4priv.jpg"
+    />
+
     <ViewTransitions />
   </head>
   <body class="overflow-x-hidden">
