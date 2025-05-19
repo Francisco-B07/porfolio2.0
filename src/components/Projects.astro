@@ -8,6 +8,9 @@ import AlgoliaIcon from "../icons/Algolia.astro";
 import TypeScriptIcon from "../icons/Typescript.astro";
 import FirebaseIcon from "../icons/Firebase.astro";
 import VercelIcon from "../icons/Vercel.astro";
+import SupabaseIcon from "../icons/Supabase.astro";
+import CloudinaryIcon from "../icons/Cloudinary.astro";
+import ResendIcon from "../icons/Resend.astro";
 
 const TAGS = {
   NEXT: {
@@ -46,9 +49,45 @@ const TAGS = {
     icon: VercelIcon,
     size: "size-4",
   },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-[#FFF] text-black",
+    icon: SupabaseIcon,
+    size: "size-4",
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-[#FFF] text-black",
+    icon: CloudinaryIcon,
+    size: "size-4",
+  },
+  RESEND: {
+    name: "Resend",
+    class: "bg-[#000] text-white",
+    icon: ResendIcon,
+    size: "size-4",
+  },
 };
 
 const PROJECTS = [
+  {
+    title: `Te Recomiendan: El poder del "Boca a Boca" ahora digital.`,
+    description: `Desarrollé esta plataforma para conectar usuarios con profesionales recomendados por su red de contactos, brindando confianza única.
+
+Funcionalidades: Perfiles editables (con oficios y reseñas), recomendaciones de contactos, publicaciones de necesidades/trabajos (con notificaciones vía email), buscador avanzado (por oficio, nombre, keywords; orden por cercanía/recomendaciones) y chat directo.
+
+`,
+    image: "/terecomiendan.webp",
+    link: "https://www.terecomiendan.com/",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TAILWIND,
+      TAGS.ALGOLIA,
+      TAGS.SUPABASE,
+      TAGS.CLOUDINARY,
+      TAGS.RESEND,
+    ],
+  },
   {
     title: "E-commerce Manso editorial",
     description: `Desarrollé un e-commerce completo para Manso Editorial, un emprendimiento local enfocado en la venta de libros, con el objetivo de digitalizar su negocio y optimizar la experiencia de compra en línea.`,
